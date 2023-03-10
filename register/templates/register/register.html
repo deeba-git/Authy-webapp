@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/register.css' %}" />
+    <title>Registration</title>
+  </head>
+  <body>
+    <form method="POST" action="{% url 'db_register' %}">
+      {% csrf_token %}
+      <div class="form">
+        <h3>Registration Form</h3>
+        <fieldset>
+          <label for="fname" id="fname">{{form.first_name.label_tag}} </label>
+          <input type="text" id="fnamefield" name="fname" required />
+          <br /><br />
+
+          <label for="lname" id="lname">{{form.last_name.label_tag}}</label>
+          <input type="text" id="lnamefield" name="lname" required />
+          <br /><br />
+
+          <label for="username" id="username"
+            >{{form.username.label_tag}}</label
+          >
+          <input type="text" id="usernamefield" name="username" required />
+          <br /><br />
+
+          <label for="email" id="email">{{form.email.label_tag}}</label>
+          <input type="email" id="emailfield" name="email" required />
+          <br /><br />
+
+          <label for="password" id="password"
+            >{{form.password.label_tag}}</label
+          >
+          <input type="password" id="passwordfield" name="password" required />
+          <br />
+
+          <button type="submit" class="btn-1">Register</button>
+        </fieldset>
+      </div>
+    </form>
+  </body>
+</html>

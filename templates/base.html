@@ -1,0 +1,37 @@
+{% load static %}
+<form>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+      <title>Authy</title>
+    </head>
+    <style>
+      h1 {
+        color: #0a2647;
+        padding-left: 600px;
+      }
+
+      h3 {
+        color: #0a2647;
+        padding-left: 570px;
+        font-style: italic;
+      }
+      h4 {
+        color: #0a2647;
+        padding-left: 510px;
+      }
+    </style>
+    <body>
+      <form>
+        <h1>Authy😄</h1>
+        <h3>A Basic Login System!</h3>
+        <h4>Note: Before SignIn, please SignUp first :)!</h4>
+        {% block content %} {% endblock %}
+      </form>
+    </body>
+  </html>
+</form>

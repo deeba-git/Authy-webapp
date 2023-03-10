@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+
+<form>
+  {% csrf_token %}
+  <img src="{% static '/images/home.png' %}" alt="home" id="homeimg" />
+  <button type="submit" name="signup-btn" class="signup-btn">
+    <a href="{% url 'signin' %}">Sign In</a>
+  </button>
+  <button type="submit" name="signup-btn" class="signup-btn">
+    <a href="{% url 'register' %}">Sign Up</a>
+  </button>
+</form>
+
+{% endblock %}

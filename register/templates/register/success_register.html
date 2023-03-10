@@ -1,0 +1,26 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/success_register.css' %}" />
+
+    <title>Registered</title>
+  </head>
+  <body>
+    <form method="POST" action="{% url 'logout' %}">
+      <h1>Successfully Registered!</h1>
+      {% csrf_token %}
+      <img
+        src="{% static '/images/success_register.png' %}"
+        alt="successfully register"
+        id="registerimg"
+      />
+      <br />
+
+      <button type="submit" class="btn-1">Logout</button>
+    </form>
+  </body>
+</html>
